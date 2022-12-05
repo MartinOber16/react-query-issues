@@ -8,7 +8,11 @@ const getLabels = async (): Promise<Label[]> => {
 
 	// const res = await fetch('https://api.github.com/repos/facebook/react/labels');
 	// const data = await res.json();
-	const { data } = await githubApi.get<Label[]>('/labels');
+	const { data } = await githubApi.get<Label[]>('/labels', {
+		headers: {
+			Authorization: null,
+		},
+	});
 	return data;
 };
 
