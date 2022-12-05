@@ -10,6 +10,7 @@ interface Props {
 	labels: string[];
 	page?: number;
 }
+
 const getIssues = async ({
 	labels,
 	state,
